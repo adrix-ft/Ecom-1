@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-primary-50: #f9f8f5;
+  --color-primary-100: #f3f0ea;
+  --color-primary-200: #e4ded3;
+  --color-primary-300: #d2c7b1;
+  --color-primary-400: #baa782;
+  --color-primary-500: #a28b5d;
+  --color-primary-600: #88754e;
+  --color-primary-700: #6e5f3f;
+  --color-primary-800: #544830;
+  --color-primary-900: #3f3727;
+  --color-primary-950: #292419;
+
+  --color-secondary-50: #fef3f0;
+  --color-secondary-100: #fde7e2;
+  --color-secondary-200: #fbc8bb;
+  --color-secondary-300: #ff9d85;
+  --color-secondary-400: #ff5c33;
+  --color-secondary-500: #ff3300;
+  --color-secondary-600: #d62b00;
+  --color-secondary-700: #ad2300;
+  --color-secondary-800: #851b00;
+  --color-secondary-900: #5e1908;
+  --color-secondary-950: #3d1005;
+
+  --color-beetle-dark: #0a0a0a;
+  --color-beetle-card: #121212;
+  --color-beetle-cream: #f3f0ea;
+  --color-beetle-sand: #f9f8f5;
+
+  --color-adrix-dark: #0a0a0a;
+  --color-adrix-card: #121212;
+  --color-adrix-cream: #f3f0ea;
+  --color-adrix-sand: #f9f8f5;
+}
+
+:root {
+  --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0c0c0c;
+  color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom marquee animation for top ticker */
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Steady speed marquee for mobile value points */
+.animate-marquee-steady {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-steady:hover,
+.animate-marquee-steady:active {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar utility for clean horizontal swipe containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Adrix — Considered Essentials",
+  "description": "Coats, knitwear, leather and objects made in small runs from named mills, with two years of free repairs and thirty-day returns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
